@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "create-react-app": "^3.2.0",
+    "formik": "^2.0.6",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-bootstrap": "^1.0.0-beta.16",
+    "react-router-dom": "^5.1.2"
+  },
+  "name": "Money-Badger-front-end",
+  "version": "1.0.0",
+  "description": "Front-end application for Money Badger",
+  "main": "index.js",
+  "repository": "https://github.com/Winter-Hackathon/Money-Badger-front-end.git",
+  "author": "Hutch Crowley <tothecoda@gmail.com>",
+  "license": "MIT",
+  "private": null
+}
