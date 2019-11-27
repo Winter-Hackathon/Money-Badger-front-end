@@ -23,3 +23,23 @@
 .App-link {
   color: #09d3ac;
 }
+
+.content{
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+}
+
+.button-bar{
+  padding: 10px;
+}
+
+button{
+  margin: 2% auto;
+}
+
+.chart-view{
+  width: 100%;
+  padding: 10px;
+}
