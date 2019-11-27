@@ -13,6 +13,9 @@ function History(props) {
         {
             title:"XLM",
             text:"The lumen, often abbreviated XLM, is the protocol token of the Stellar network. One hundred billion lumens were created the instant Stellar went live, as part of the protocol’s design. These tokens play a unique role in the network’s operation.Lumens are available at every major cryptocurrency exchange."
+        },{
+            title:"LTC",
+            text:"Litecoin was released via an open-source client on GitHub on October 7, 2011 by Charlie Lee, a Google employee and former Engineering Director at Coinbase. The Litecoin network went live on October 13, 2011. It was a fork of the Bitcoin Core client, differing primarily by having a decreased block generation time (2.5 minutes), increased maximum number of coins, different hashing algorithm (scrypt, instead of SHA-256), and a slightly modified GUI. During the month of November 2013, the aggregate value of Litecoin experienced massive growth which included a 100% leap within 24 hours. In May 2017, Litecoin became the first of the top 5 (by market cap) cryptocurrencies to adopt Segregated Witness. Later in May of the same year, the first Lightning Network transaction was completed through Litecoin, transferring 0.00000001 LTC from Zürich to San Francisco in under one second. "
         }
         ]
     

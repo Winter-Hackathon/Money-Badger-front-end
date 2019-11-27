@@ -7,6 +7,7 @@ import { Route } from "react-router-dom";
 import TSLA from './comp/charts/TSLAChart';
 import BTC from './comp/charts/BTCChart';
 import XLM from './comp/charts/XLMChart';
+import LTC from './comp/charts/LTCChart';
 
 function App() {
 
@@ -20,6 +21,9 @@ function App() {
   function DisplayXLM(e){
     window.location="/xlm"
   }
+  function DisplayLTC(e){
+    window.location="/ltc"
+  }
 
 
   return (
@@ -32,12 +36,14 @@ function App() {
           <button onClick={DisplayTSLA} > TSLA </button>
           <button onClick={DisplayBTC}> BTC </button>
           <button onClick={DisplayXLM}>STELLAR</button>
+          <button onClick={DisplayLTC}>LITECOIN</button>
         </div>
         {/* routes that will be displaced based on button */}
         <div className="chart-view">
           <Route path="/elon" exact component={TSLA} />
           <Route path="/btc" exact component={BTC} />
           <Route path="/xlm" exact component={XLM} />
+          <Route path="/ltc" exact component={LTC} />
         </div>
       </div>
     </div>
