@@ -5,6 +5,9 @@ import logo from '../logo.svg'
 function Home() {
     return (
         <>
+        <div className="navbar">
+            <a href="/">Return</a>
+        </div>
         <div className="header">
             <img src={logo} className="App-logo" alt="logo" />
             <h1 className="header-title">Money Badger</h1>
