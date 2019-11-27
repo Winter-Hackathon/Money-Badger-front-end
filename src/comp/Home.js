@@ -1,6 +1,7 @@
 import React from 'react'
 import './home.css' 
 import logo from '../logo.svg'
+import CandlestickChart from './Chart'
 
 function Home() {
     return (
@@ -16,6 +17,7 @@ function Home() {
             rates.
             </p>
         </div>
+        <CandlestickChart/>
         </>
     )
 }
