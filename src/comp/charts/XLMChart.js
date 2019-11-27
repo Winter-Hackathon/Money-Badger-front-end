@@ -15,13 +15,13 @@ class CandlestickChart extends Component {
     //count controls how many data points we receive
     this.count = 0;
      // this value will pass to the history component to tell it to return the info about the current we are looking at
-    this.history = "BTC"
+    this.history = "XLM"
   }
 
   componentDidMount() {
     // this is the stock/currency that is being called
     const state ={
-      symbol:"BTC"
+      symbol:"XLM"
     }
     axios
       .get(
@@ -60,7 +60,7 @@ class CandlestickChart extends Component {
       animationEnabled: true,
       exportEnabled: true,
       title: {
-        text: "BITCOIN PRICE"
+        text: "Stellar Lumens"
       },
       axisX: {
         valueFormatString: "MMM"
@@ -74,7 +74,7 @@ class CandlestickChart extends Component {
         {
           type: "candlestick",
           showInLegend: true,
-          name: "BITCOIN",
+          name: "STELLAR",
           yValueFormatString: "$###0.00",
           xValueFormatString: "MMMM YY",
           dataPoints: this.dataPoints

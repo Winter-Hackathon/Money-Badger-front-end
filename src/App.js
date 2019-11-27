@@ -5,7 +5,8 @@ import { Route } from "react-router-dom";
 
 // Views we can render in
 import TSLA from './comp/charts/TSLAChart';
-import BTC from './comp/charts/BTCChart'
+import BTC from './comp/charts/BTCChart';
+import XLM from './comp/charts/XLMChart';
 
 function App() {
 
@@ -15,6 +16,9 @@ function App() {
   }
   function DisplayBTC(e){
     window.location = "/btc"
+  }
+  function DisplayXLM(e){
+    window.location="/xlm"
   }
 
 
@@ -27,11 +31,13 @@ function App() {
         <div className="button-bar">
           <button onClick={DisplayTSLA} > TSLA </button>
           <button onClick={DisplayBTC}> BTC </button>
+          <button onClick={DisplayXLM}>STELLAR</button>
         </div>
         {/* routes that will be displaced based on button */}
         <div className="chart-view">
           <Route path="/elon" exact component={TSLA} />
           <Route path="/btc" exact component={BTC} />
+          <Route path="/xlm" exact component={XLM} />
         </div>
       </div>
     </div>

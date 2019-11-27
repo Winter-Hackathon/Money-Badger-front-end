@@ -9,6 +9,10 @@ function History(props) {
         {
             title:"BTC",
             text:"Bitcoin (₿) is a cryptocurrency. It is a decentralized digital currency without a central bank or single administrator that can be sent from user to user on the peer-to-peer bitcoin network without the need for intermediaries."
+        },
+        {
+            title:"XLM",
+            text:"The lumen, often abbreviated XLM, is the protocol token of the Stellar network. One hundred billion lumens were created the instant Stellar went live, as part of the protocol’s design. These tokens play a unique role in the network’s operation.Lumens are available at every major cryptocurrency exchange."
         }
         ]
     
