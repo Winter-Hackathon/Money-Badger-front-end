@@ -1,0 +1,22 @@
+.App-logo {
+    display: flex;
+    padding: 10px;
+    margin: 0 auto;
+    height: 14vmin;
+  }
+
+.header{
+max-width: 20%;
+}
+
+.header-title{
+text-align: center;
+font-size: 5vmin;
+margin: 0 auto;
+border-bottom: solid black 1px;
+}
+
+.header-tagline{
+line-height: .8;
+padding: 0 2%;
+}
