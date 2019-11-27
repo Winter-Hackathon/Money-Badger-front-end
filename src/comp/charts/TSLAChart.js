@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import CanvasJSReact from "../../assets/canvasjs.react";
 import axios from "axios";
+import History from '../History'
 import './chart.css'
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
@@ -11,13 +12,16 @@ class CandlestickChart extends Component {
     this.TimeSeries = "TIME_SERIES_WEEKLY";
     this.dataPoints = [];
     this.ourValues = [];
+    //count controls how many data points we receive
     this.count = 0;
+    // this value will pass to the history component to tell it to return the info about the current we are looking at
+    this.history = "TSLA"
   }
 
   componentDidMount() {
     // this is the stock/currency that is being called
     const state ={
-      symbol:"TSLA"
+      symbol:"TSLA",
     }
     axios
       .get(
@@ -82,6 +86,8 @@ class CandlestickChart extends Component {
       <div>
         <CanvasJSChart options={options} onRef={ref => (this.chart = ref)} />
         {/*You can get reference to the chart instance as shown above using onRef. This allows you to access all chart properties and methods*/}
+        {/* this is our info competent it displays information about the currency we are looking at */}
+        <History props={this.history}/>
       </div>
     );
   }

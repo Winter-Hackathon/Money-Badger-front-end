@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import CanvasJSReact from "../../assets/canvasjs.react";
 import axios from "axios";
+import History from '../History'
 import './chart.css'
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
@@ -11,7 +12,10 @@ class CandlestickChart extends Component {
     this.TimeSeries = "DIGITAL_CURRENCY_DAILY";
     this.dataPoints = [];
     this.ourValues = [];
+    //count controls how many data points we receive
     this.count = 0;
+     // this value will pass to the history component to tell it to return the info about the current we are looking at
+    this.history = "BTC"
   }
 
   componentDidMount() {
@@ -25,6 +29,7 @@ class CandlestickChart extends Component {
       )
       .then(res => {
         console.log("RES: ", res);
+        // REMEMBER TO CHECK THE TIME SERIES NAME WHEN CREATING A NEW CHART, THEY NAME THEM VERY DIFFERENTLY
         for (let property in res.data["Time Series (Digital Currency Daily)"]) {
           this.ourValues = Object.values(
             res.data["Time Series (Digital Currency Daily)"][property]
@@ -82,6 +87,8 @@ class CandlestickChart extends Component {
       <div>
         <CanvasJSChart options={options} onRef={ref => (this.chart = ref)} />
         {/*You can get reference to the chart instance as shown above using onRef. This allows you to access all chart properties and methods*/}
+         {/* this is our info competent it displays information about the currency we are looking at */}
+         <History props={this.history}/>
       </div>
     );
   }
