@@ -1,0 +1,33 @@
+.navbar{
+  text-align: right;
+  padding: 0 15%;
+  border: 1px solid black;
+}
+
+a{
+  text-decoration: none;
+  color: blue;
+}
+
+.App-logo {
+    display: flex;
+    padding: 10px;
+    margin: 0 auto;
+    height: 8vmin;
+  }
+
+.header{
+max-width: 20%;
+}
+
+.header-title{
+text-align: center;
+font-size: 4vmin;
+margin: 0 auto;
+border-bottom: solid black 1px;
+}
+
+.header-tagline{
+line-height: .8;
+padding: 0 2%;
+}

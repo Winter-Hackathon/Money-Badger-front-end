@@ -84,7 +84,7 @@ class CandlestickChart extends Component {
  
   
     return (
-      <div>
+      <div className="trade-view">
         <CanvasJSChart options={options} onRef={ref => (this.chart = ref)} />
         {/*You can get reference to the chart instance as shown above using onRef. This allows you to access all chart properties and methods*/}
          {/* this is our info competent it displays information about the currency we are looking at */}

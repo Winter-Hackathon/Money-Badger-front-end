@@ -5,9 +5,6 @@
   font-family: 'Roboto', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-}
 
 .App-header {
   background-color: #282c34;
@@ -32,14 +29,42 @@
 }
 
 .button-bar{
+  display: flex;
+  flex-direction: column;
   padding: 10px;
 }
 
 button{
   margin: 2% auto;
+  background: none;
+}
+
+label{
+  text-align: center;
+  margin: 1.5vmin 0;
+  border-bottom: black 2px solid;
 }
 
 .chart-view{
   width: 100%;
   padding: 10px;
+}
+
+.navbar{
+  text-align: right;
+  padding: 0 15%;
+  justify-content: space-around;
+}
+
+a{
+  padding: 0 2%;
+}
+
+.bullet{
+  width: 2vmin;
+}
+
+.side-bar-link{
+  font-size: 1.3vmin;
+  font-weight: 1000;
 }

@@ -1,32 +1,19 @@
-.navbar{
-  text-align: right;
-  padding: 0 15%;
+.homepage{
+    border: red 1px solid;
 }
 
-a{
-  text-decoration: none;
-  color: blue;
-}
-
-.App-logo {
+.choice-block{
     display: flex;
-    padding: 10px;
-    margin: 0 auto;
-    height: 14vmin;
-  }
-
-.header{
-max-width: 20%;
+    justify-content: center;
 }
 
-.header-title{
-text-align: center;
-font-size: 5vmin;
-margin: 0 auto;
-border-bottom: solid black 1px;
+.cur-input{
+    margin: 0 3%;
+
 }
 
-.header-tagline{
-line-height: .8;
-padding: 0 2%;
+.display-block{
+    display: flex;
+    justify-content: center;
+    margin: 2vmin;
 }
