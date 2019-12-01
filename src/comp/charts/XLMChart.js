@@ -88,7 +88,9 @@ class CandlestickChart extends Component {
         <CanvasJSChart options={options} onRef={ref => (this.chart = ref)} />
         {/*You can get reference to the chart instance as shown above using onRef. This allows you to access all chart properties and methods*/}
          {/* this is our info competent it displays information about the currency we are looking at */}
-         <History props={this.history}/>
+         <div className="history">
+           <History props={this.history}/>
+         </div>
       </div>
     );
   }

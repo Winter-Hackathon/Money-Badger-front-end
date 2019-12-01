@@ -4,3 +4,8 @@
     max-width: 80%;
     flex-direction: column;
 }
+
+.history{
+    border-top: solid black 1px;
+    margin: 2vmin;
+}

@@ -35,8 +35,9 @@
 }
 
 button{
-  margin: 2% auto;
+  justify-content: left;
   background: none;
+  text-align: left;
 }
 
 label{
@@ -56,6 +57,11 @@ label{
   justify-content: space-around;
 }
 
+.top-links{
+  color: darkgrey;
+  text-decoration: none;
+}
+
 a{
   padding: 0 2%;
 }
@@ -64,7 +70,13 @@ a{
   width: 2vmin;
 }
 
+.right-sidebar{
+  width: 16%;
+}
+
 .side-bar-link{
   font-size: 1.3vmin;
   font-weight: 1000;
+  color: blue;
+  text-decoration: none;
 }

@@ -33,9 +33,9 @@ function App() {
   return (
     <div className="App">
         <div className="navbar">
-          <a href="/what-is-money">What Is Money</a>
-          <a href="/what-is-mining">What Is Mining?</a>
-          <a href="/">Return</a>
+          <a className="top-links" href="/what-is-money">What Is Money</a>
+          <a className="top-links" href="/what-is-mining">What Is Mining?</a>
+          {window.location.pathname != "/" ? <a className="top-links" href="/">Home</a> : null}
         </div>
       {/* this displays the header*/}
       <Route path="/" component={Header} />
@@ -43,7 +43,7 @@ function App() {
         {/* we will use router and buttons to switch between the charts */}
         <div className="button-bar">
           <label>Stocks</label>
-          <button onClick={DisplayTSLA} > TSLA </button>
+          <button onClick={DisplayTSLA} > TESLA </button>
           <label>Crypto</label>
           <button onClick={DisplayBTC}> BTC </button>
           <button onClick={DisplayXLM}>STELLAR</button>
@@ -58,13 +58,9 @@ function App() {
           <Route path="/ltc" exact component={LTC} />
         </div>
         <div className="right-sidebar">
-        <a className="side-bar-link" href="https://bitcoin.org/en/choose-your-wallet"><img src={Bullet} className="bullet" />CREATE A BITCOIN WALLET </a><br/>
-        <a className="side-bar-link" href=" https://litecoin.org/"><img src={Bullet} className="bullet" />CREATE A LITECOIN WALLET </a><br/>
-        <a className="side-bar-link" href="https://www.stellar.org/lumens/wallets/#hardware-wallets"><img src={Bullet} className="bullet" />COLLECT STELLAR! </a><br/>
-        side bar for links and wallets
-     
-        
-       
+        <a className="side-bar-link" href="https://bitcoin.org/en/choose-your-wallet"><img src={Bullet} className="bullet" />&nbsp;&nbsp;&nbsp;&nbsp;CREATE A BITCOIN WALLET </a><br/>
+        <a className="side-bar-link" href=" https://litecoin.org/"><img src={Bullet} className="bullet" />&nbsp;&nbsp;&nbsp;&nbsp;CREATE A LITECOIN WALLET </a><br/>
+        <a className="side-bar-link" href="https://www.stellar.org/lumens/wallets/#hardware-wallets"><img src={Bullet} className="bullet" />&nbsp;&nbsp;&nbsp;&nbsp;COLLECT STELLAR! </a><br/>
         </div>
       </div>
     </div>

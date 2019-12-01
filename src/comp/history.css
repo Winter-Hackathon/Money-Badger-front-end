@@ -1,0 +1,17 @@
+.content{
+    display: flex;
+}
+
+.img{
+    padding: 10px;
+    width: 100%;
+    max-width: 20vmin;
+}
+
+.text{
+    padding-top: 5vmin;
+}
+
+.title{
+    border-bottom: 1px solid black;
+}
