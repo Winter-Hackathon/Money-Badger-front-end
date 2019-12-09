@@ -42,6 +42,7 @@ function App() {
         <div className="button-bar">
           <label>Stocks</label>
           <Link to="/stock/TSLA">TSLA</Link>
+          <Link to="/stock/AMZN">AMZN</Link>
           {/* <button onClick={DisplayTSLA} > TSLA </button> */}
           <label>Crypto</label>
           <Link to="/crypto/BTC">BTC</Link>
