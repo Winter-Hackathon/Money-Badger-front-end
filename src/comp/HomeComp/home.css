@@ -1,0 +1,49 @@
+.homepage{
+    border: red 1px solid;
+}
+
+.choice-block{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.drop-menu{
+    margin: 0 2%;
+}
+
+.drop-menu-contents{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid grey;
+}
+
+.drop-menu-contents-button{
+    border: none;
+}
+
+.drop-menu-contents-button:hover{
+    color: rgb(115, 179, 85)
+}
+
+.cur-input{
+    margin: 0 3%;
+
+}
+
+.display-block{
+    display: flex;
+    justify-content: center;
+    margin: 2vmin;
+}
+
+.homepage-title-block{
+    text-align: center;
+}
+
+.ExRate{
+    padding: 1vmin 2vmin;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
