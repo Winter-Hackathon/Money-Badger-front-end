@@ -23,6 +23,9 @@ class CandlestickChart extends Component {
     // this value will pass to the history component to tell it to return the info about the current we are looking at
     this.history = "TSLA";
     this.symbol = props.match.params.name;
+    this.state = {
+      dataPoints: []
+    };
   }
 
   componentDidMount() {
@@ -57,52 +60,52 @@ class CandlestickChart extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if (this.props.match.params.name !== prevProps.match.params.name) {
-      console.log("Name: ", this.props.match.params.name);
-      if (this.props.match.params.type === "stock") {
-        this.TimeSeries = "TIME_SERIES_WEEKLY";
-        this.market = "";
-      } else {
-        this.TimeSeries = "DIGITAL_CURRENCY_WEEKLY";
-        this.market = "&market=USD";
-      }
-      this.dataPoints = [];
-      this.ourValues = [];
-      //count controls how many data points we receive
-      this.count = 0;
-      // this value will pass to the history component to tell it to return the info about the current we are looking at
-      this.history = "TSLA";
-      this.symbol = this.props.match.params.name;
-
-      axios
-        .get(
-          `https://www.alphavantage.co/query?function=${this.TimeSeries}&symbol=${this.symbol}${this.market}&apikey=ACT64CZ1Z26W5JYR`
-        )
-        .then(res => {
-          console.log("RES: ", res);
-          for (let property in res.data[Object.keys(res.data)[1]]) {
-            this.ourValues = Object.values(
-              res.data[Object.keys(res.data)[1]][property]
-            );
-            if (this.count < 100) {
-              this.dataPoints.push({
-                x: new Date(`${property}`),
-                y: [
-                  Number.parseFloat(this.ourValues[0]),
-                  Number.parseFloat(this.ourValues[1]),
-                  Number.parseFloat(this.ourValues[2]),
-                  Number.parseFloat(this.ourValues[3])
-                ]
-              });
-              this.count++;
-            }
-          }
-          this.chart.render();
-        })
-        .catch(err => {
-          console.log("ERROR: ", err);
-        });
+    // if (this.props.match.params.name !== prevProps.match.params.name) {
+    // console.log("Name: ", this.props.match.params.name);
+    if (this.props.match.params.type === "stock") {
+      this.TimeSeries = "TIME_SERIES_WEEKLY";
+      this.market = "";
+    } else {
+      this.TimeSeries = "DIGITAL_CURRENCY_WEEKLY";
+      this.market = "&market=USD";
     }
+    this.dataPoints = [];
+    this.ourValues = [];
+    //count controls how many data points we receive
+    this.count = 0;
+    // this value will pass to the history component to tell it to return the info about the current we are looking at
+    this.history = "TSLA";
+    this.symbol = this.props.match.params.name;
+
+    axios
+      .get(
+        `https://www.alphavantage.co/query?function=${this.TimeSeries}&symbol=${this.symbol}${this.market}&apikey=ACT64CZ1Z26W5JYR`
+      )
+      .then(res => {
+        for (let property in res.data[Object.keys(res.data)[1]]) {
+          this.ourValues = Object.values(
+            res.data[Object.keys(res.data)[1]][property]
+          );
+          if (this.count < 100) {
+            this.dataPoints.push({
+              x: new Date(`${property}`),
+              y: [
+                Number.parseFloat(this.ourValues[0]),
+                Number.parseFloat(this.ourValues[1]),
+                Number.parseFloat(this.ourValues[2]),
+                Number.parseFloat(this.ourValues[3])
+              ]
+            });
+            this.count++;
+          }
+        }
+        this.chart.options.data[0].dataPoints = this.dataPoints;
+        this.chart.render();
+      })
+      .catch(err => {
+        console.log("ERROR: ", err);
+      });
+    // }
   }
 
   render() {
@@ -138,7 +141,7 @@ class CandlestickChart extends Component {
         <CanvasJSChart options={options} onRef={ref => (this.chart = ref)} />
         {/*You can get reference to the chart instance as shown above using onRef. This allows you to access all chart properties and methods*/}
         {/* this is our info competent it displays information about the currency we are looking at */}
-        <History props={this.symbol} />
+        {/* <History props={this.symbol} /> */}
       </div>
     );
   }
