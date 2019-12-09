@@ -14,7 +14,7 @@ class CandlestickChart extends Component {
       this.market = "";
     } else {
       this.TimeSeries = "DIGITAL_CURRENCY_WEEKLY";
-      this.market = "&market=CNY";
+      this.market = "&market=USD";
     }
     this.dataPoints = [];
     this.ourValues = [];
@@ -64,7 +64,7 @@ class CandlestickChart extends Component {
         this.market = "";
       } else {
         this.TimeSeries = "DIGITAL_CURRENCY_WEEKLY";
-        this.market = "&market=CNY";
+        this.market = "&market=USD";
       }
       this.dataPoints = [];
       this.ourValues = [];

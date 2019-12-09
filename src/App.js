@@ -7,7 +7,7 @@ import Header from "./comp/Header";
 import Bullet from "./assets/a-bullet-from-flowers.gif";
 
 // Views we can render in
-import Home from "./comp/Home";
+import Home from "./comp/HomeComp/Home";
 import TSLA from "./comp/charts/TSLAChart";
 import BTC from "./comp/charts/BTCChart";
 import XLM from "./comp/charts/XLMChart";
@@ -63,12 +63,12 @@ function App() {
             href="https://bitcoin.org/en/choose-your-wallet"
           >
             <img src={Bullet} className="bullet" />
-            CREATE A BITCOIN WALLET{" "}
+            &nbsp;&nbsp;&nbsp;&nbsp;CREATE A BITCOIN WALLET{" "}
           </a>
           <br />
           <a className="side-bar-link" href=" https://litecoin.org/">
             <img src={Bullet} className="bullet" />
-            CREATE A LITECOIN WALLET{" "}
+            &nbsp;&nbsp;&nbsp;&nbsp;CREATE A LITECOIN WALLET{" "}
           </a>
           <br />
           <a
@@ -76,7 +76,7 @@ function App() {
             href="https://www.stellar.org/lumens/wallets/#hardware-wallets"
           >
             <img src={Bullet} className="bullet" />
-            COLLECT STELLAR!{" "}
+            &nbsp;&nbsp;&nbsp;&nbsp;COLLECT STELLAR!{" "}
           </a>
           <br />
           side bar for links and wallets
